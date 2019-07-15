@@ -14,7 +14,7 @@ var inter;
 $("#startgame").on("click",startgame);
 function startgame ()
 {
-
+    $("#startgame").remove();
     inter = setInterval(timer,1000);
 
 $("#Parent").append(
@@ -102,20 +102,7 @@ $("#submit").on("click", gameover);
 
 
 
-if (rightanswers == answerstowin)
-    {
-     wins++;
-    console.log(right0s)
-    $("#wins").text(wins);
-    alert ("You Win!");
-    startgame();
-    }
-    else if (rightanswers < answerstowin)
-    {
-        fails ++; 
-        $("#failures").text(failures);
-        startgame();
-    }
+
     
 
 //timer//
@@ -133,6 +120,8 @@ fails ++;
 
 
 function gameover(){
+
+    $("#submit").remove();
 
     for (var i=0; i < 6; i ++){
 
