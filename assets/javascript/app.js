@@ -33,7 +33,7 @@ if (rightanswers == answerstowin)
     }
     else if (rightanswers > answerstowin)
     {
-        failures ++; 
+        fails ++; 
         $("#failures").text(failures);
         startgame();
     }
